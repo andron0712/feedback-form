@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма зворотного зв'язку</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Зворотний зв'язок</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Повідомлення (мінімум 20 символів):</label>
+                <textarea id="message" rows="5" required></textarea>
+                <span class="error" id="messageError"></span>
+            </div>
+            
+            <button type="submit">Надіслати</button>
+        </form>
+        <div id="successMessage" class="success-hidden">Форму успішно надіслано!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
